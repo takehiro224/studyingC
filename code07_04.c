@@ -27,10 +27,32 @@ int main(void)
             for (int j = 0; j < i; j++) {
                 check = false;
                 if (answer[i] == answer[j]) { // 同じ数字はNG
-
+                    break;
                 }
+                check = true; // 重複なければOK
             }
         } while (i > 0 && check == false); // 1桁目はチェック不要
     }
 
+    do { // ゲームが続く間はループする
+        /* 結果を初期化 */
+        int hit = 0;
+        int blow = 0;
+
+        /* 入力された予想を変数に格納 */
+        for (int i = 0; i < 3; i++) {
+            printf("%d桁目の予想を0~9の数字で入力してください:", i + 1);
+            String inputStr;
+            scanf("%s", inputStr);
+            input[i] = atoi(inputStr); // atoiで文字列を数値に変換
+        }
+
+        /* 答え合わせ */
+        for (int i = 0; i < 3; i++) {
+            if (input[i] == answer[i]) {
+                hit++;
+            }
+        }
+
+    } while (true); // ゲームが続く間はループする
 }
