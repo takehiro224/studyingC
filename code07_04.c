@@ -27,7 +27,7 @@ int main(void)
             for (int j = 0; j < i; j++) {
                 check = false;
                 if (answer[i] == answer[j]) { // 同じ数字はNG
-                    break;
+                    break; // breakしたらdoを抜ける
                 }
                 check = true; // 重複なければOK
             }
@@ -59,6 +59,8 @@ int main(void)
             }
         }
 
+        /* 結果発表 */
+        printf("%dヒット! %dブロー! ¥n", hit, blow);
 
     } while (true); // ゲームが続く間はループする
 }
