@@ -50,9 +50,15 @@ int main(void)
         /* 答え合わせ */
         for (int i = 0; i < 3; i++) {
             if (input[i] == answer[i]) {
-                hit++;
+                hit++; // 位置も数字も一致ならhit
+            }
+            for (int j = 0; j < 3; j++) {
+                if (input[i] == answer[j] && i != j) {
+                    blow++; // 位置は異なる数字はblow
+                }
             }
         }
+
 
     } while (true); // ゲームが続く間はループする
 }
