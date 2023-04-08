@@ -62,5 +62,11 @@ int main(void)
         /* 結果発表 */
         printf("%dヒット! %dブロー! ¥n", hit, blow);
 
+        if (hit == 3) {
+            // 正解
+            printf("正解¥n");
+            break;
+        }
+
     } while (true); // ゲームが続く間はループする
 }
