@@ -66,6 +66,11 @@ int main(void)
             // 正解
             printf("正解¥n");
             break;
+        } else {
+            // 不正解
+            printf("続けますか？(0: 終了 0以外の数字: 続ける) :");
+            String retryStr;
+            scanf("%s", retryStr);
         }
 
     } while (true); // ゲームが続く間はループする
