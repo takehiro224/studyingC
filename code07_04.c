@@ -71,6 +71,14 @@ int main(void)
             printf("続けますか？(0: 終了 0以外の数字: 続ける) :");
             String retryStr;
             scanf("%s", retryStr);
+
+            // 終了するなら正解を表示
+            if (atoi(retryStr) == 0) {
+                printf("正解は");
+                for (int i = 0; i < 3; i++) {
+                    printf("%d", answer[i]);
+                }
+            }
         }
 
     } while (true); // ゲームが続く間はループする
