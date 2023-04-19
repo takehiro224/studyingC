@@ -79,6 +79,7 @@ int main(void)
                     printf("%d", answer[i]);
                 }
                 printf("でした!\n");
+                break;
             }
         }
 
