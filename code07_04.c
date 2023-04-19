@@ -82,6 +82,6 @@ int main(void)
                 break;
             }
         }
-
     } while (true); // ゲームが続く間はループする
+    return 0;
 }
