@@ -15,5 +15,10 @@ int main(void)
     int a = 5; // int型変数を宣言(初期値は5)
     int b[3];  // 配列を宣言
     b[0] = 5;  // int型配列の先頭要素を5で初期化
-    
+
+    funcA(a);
+    funcB(b);
+
+    printf("a=%d, b[0]=%d\n", a, b[0]);
+    return 0;
 }
