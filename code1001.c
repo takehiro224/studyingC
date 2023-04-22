@@ -20,5 +20,6 @@ int main(void)
     funcB(b);
 
     printf("a=%d, b[0]=%d\n", a, b[0]);
+    // 実行結果: a=5, b[0]=100
     return 0;
 }
